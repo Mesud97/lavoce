@@ -29,6 +29,14 @@
       margin: 0;
       font-size: 2rem;
       letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+    }
+
+    header h1 img {
+      width: 40px; /* Imposta una dimensione per l'icona SVG */
+      height: 40px;
+      margin-right: 10px; /* Spazio tra l'icona e il testo */
     }
 
     nav a {
@@ -105,8 +113,11 @@
 <body>
 
   <header>
-    <!-- Logo (SVG) -->
-    <h1><img src="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 180 40%22><text x=%220%22 y=%2228%22 font-family=%22Georgia,%20serif%22%20font-size=%2228%22%20fill=%22black%22%20font-weight=%22bold%22%20letter-spacing=%221%22>LA%20VOCE</text></svg>" alt="LA VOCE Logo" class="logo"></h1>
+    <!-- Logo SVG + Testo -->
+    <h1>
+      <img src="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 180 40%22><text x=%220%22 y=%2228%22 font-family=%22Georgia,%20serif%22%20font-size=%2228%22%20fill=%22black%22%20font-weight=%22bold%22%20letter-spacing=%221%22>LA%20VOCE</text></svg>" alt="Logo LA VOCE" class="logo">
+      LA VOCE
+    </h1>
     <nav>
       <a href="#">Home</a>
       <a href="ultimora.html">Ultim'ora</a>
