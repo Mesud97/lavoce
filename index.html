@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LA VOCE - Cronaca Nera</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='80'>📰</text></svg>">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LA VOCE</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>📰</text></svg>">
+
   <style>
     body {
       margin: 0;
@@ -12,6 +15,7 @@
       background: #f4f4f4;
       color: #222;
     }
+
     header {
       background: #000;
       color: white;
@@ -20,11 +24,21 @@
       justify-content: space-between;
       align-items: center;
     }
+
     header h1 {
       margin: 0;
       font-size: 2rem;
       letter-spacing: 2px;
+      display: flex;
+      align-items: center;
     }
+
+    header h1 img {
+      width: 40px; /* Imposta una dimensione per l'icona SVG */
+      height: 40px;
+      margin-right: 10px; /* Spazio tra l'icona e il testo */
+    }
+
     nav a {
       margin-left: 1.5rem;
       color: white;
@@ -32,35 +46,54 @@
       font-weight: 500;
       transition: color 0.3s;
     }
+
     nav a:hover {
       color: #ffcc00;
     }
+
     .hero {
       background: #eaeaea;
       padding: 3rem 2rem;
       text-align: center;
     }
+
     .hero h2 {
       font-size: 2.2rem;
       margin-bottom: 0.5rem;
     }
+
     .hero p {
       font-size: 1.1rem;
       color: #555;
     }
+
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
     .article {
       background: white;
-      padding: 2rem;
-      margin: 2rem;
+      padding: 1.5rem;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
     }
-    .article img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin-top: 1rem;
+
+    .article:hover {
+      transform: translateY(-5px);
     }
+
+    .article h3 {
+      margin-top: 0;
+    }
+
+    .article p {
+      color: #555;
+    }
+
     footer {
       background: #000;
       color: #ccc;
@@ -68,49 +101,56 @@
       padding: 1rem;
       font-size: 0.9rem;
     }
+
+    /* Logo (SVG) */
+    .logo {
+      width: 150px;
+      height: 40px;
+    }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>LA VOCE</h1>
-  <nav>
-    <a href="#">Home</a>
-    <a href="ultimora.html">Ultim'ora</a>
-    <a href="politica.html">Politica</a>
-    <a href="cultura.html">Cultura</a>
-    <a href="tecnologia.html">Tecnologia</a>
-    <a href="cronaca_nera.html">Cronaca Nera</a>
-  </nav>
-</header>
+  <header>
+    <!-- Logo SVG + Testo -->
+    <h1>
+      <img src="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 180 40%22><text x=%220%22 y=%2228%22 font-family=%22Georgia,%20serif%22%20font-size=%2228%22%20fill=%22black%22%20font-weight=%22bold%22%20letter-spacing=%221%22>LA%20VOCE</text></svg>" alt="Logo LA VOCE" class="logo">
+      LA VOCE
+    </h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="ultimora.html">Ultim'ora</a>
+      <a href="politica.html">Politica</a>
+      <a href="cultura.html">Cultura</a>
+      <a href="tecnologia.html">Tecnologia</a>
+    </nav>
+  </header>
 
-<section class="hero">
-  <h2>In Memoria di Sara Campanella</h2>
-  <p>Un tributo alla giovane vita spezzata troppo presto.</p>
-</section>
+  <section class="hero">
+    <h2>Benvenuto su LA VOCE</h2>
+    <p>Notizie indipendenti, rapide e vere. Sempre aggiornati su ciò che conta.</p>
+  </section>
 
-<div class="article">
-  <h3>Tragico Femminicidio a Messina: La Storia di Sara Campanella</h3>
-  <p><strong>Data:</strong> 31 Marzo 2025</p>
-  <p><strong>Luogo:</strong> Messina, Italia</p>
-  <p><strong>Vittima:</strong> Sara Campanella, 22 anni, studentessa universitaria</p>
-  <p><strong>Autore del reato:</strong> Stefano Argentino, 27 anni, ex compagno di università</p>
-  <p><strong>Dettagli dell'incidente:</strong></p>
-  <p>Sara Campanella, una promettente studentessa di infermieristica, è stata tragicamente accoltellata a Messina il 31 marzo 2025. Il suo ex compagno di università, Stefano Argentino, l'ha seguita dopo il tirocinio ospedaliero e l'ha attaccata per strada, infliggendole ferite mortali al collo e alla schiena. Nonostante i tentativi di fuga e l'intervento dei passanti, Sara è deceduta poco dopo l'arrivo in ospedale.</p>
-  <p><strong>Contesto:</strong></p>
-  <p>Secondo le indagini, Argentino aveva perseguitato Sara per oltre due anni, non accettando il suo rifiuto. La ragazza non aveva mai denunciato il comportamento ossessivo, non considerandolo una minaccia imminente. La comunità è rimasta scossa da questo atto di violenza, sottolineando la necessità di sensibilizzazione contro la violenza di genere.</p>
-  <p><strong>Reazioni della comunità:</strong></p>
-  <p>La camera ardente è stata allestita nella chiesa delle Anime Sante a Misilmeri, paese natale di Sara, dove centinaia di persone hanno reso omaggio, definendola "figlia di tutti". I funerali si sono svolti il 7 aprile 2025, presieduti dall'arcivescovo di Palermo, Corrado Lorefice.</p>
-  <p><strong>Aggiornamenti legali:</strong></p>
-  <p>Stefano Argentino è stato arrestato poche ore dopo l'incidente, nascosto in un bed & breakfast a Noto. Ha confessato il crimine, ma le indagini suggeriscono che potrebbe aver ricevuto assistenza nell'evadere la cattura. Attualmente, è detenuto in attesa di ulteriori procedimenti legali.</p>
-  <p><strong>Immagini dell'incidente:</strong></p>
-  <p><img src="image1.jpg" alt="Sara Campanella" /></p>
-  <p><img src="image2.jpg" alt="Funerale Sara Campanella" /></p>
-</div>
+  <section class="articles">
+    <div class="article">
+      <h3>[Ultim’ora] Titolo dell’articolo</h3>
+      <p>Riassunto della notizia più recente. Aggiornamenti in tempo reale...</p>
+    </div>
+    <div class="article">
+      <h3>[Politica] Governo e nuove riforme</h3>
+      <p>Analisi sulle ultime decisioni politiche e i loro impatti.</p>
+    </div>
+    <div class="article">
+      <h3>[Cultura] Mostra d’arte a Milano</h3>
+      <p>La nuova esposizione racconta la bellezza della tradizione italiana.</p>
+    </div>
+  </section>
 
-<footer>
-  © 2025 LA VOCE – Tutti i diritti riservati | Contatti: redazione@lavoce.it
-</footer>
+  <footer>
+    © 2025 LA VOCE – Tutti i diritti riservati | Contatti: redazione@lavoce.it
+  </footer>
 
 </body>
 </html>
+
